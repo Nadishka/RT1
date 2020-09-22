@@ -1,0 +1,67 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<style>
+    .center {
+        text-align: center;
+        border: 3px solid red;
+    }
+</style>
+<br />
+<br />
+
+
+
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            @Html.ActionLink("Resistor Data", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li>@Html.ActionLink("Past Recodes", "PastData", "Home")</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="center">
+    <div class="row">
+        <h2>Serial Number:</h2>
+        <input type="text" id="sn" name="sn" />
+        <br />
+        <br />
+    </div>
+
+    <div class="row">
+        <h2>Resistor Value:</h2>
+        <input type="text" id="value" name="value" />
+        <select name="value" id="ohm">
+            <option value="ohm">Ohm</option>
+            <option value="kohm">KOhm</option>
+            <option value="mohm">MOhm</option>
+        </select>
+        <br />
+        <br />
+        <br />
+
+        <h2>Please Select Resistor Type:</h2>
+        <input type="radio" id="mf" name="type" value="metalFilled">
+        <label for="metalFilled">Metal Filled</label>
+        <br />
+        <input type="radio" id="chip" name="type" value="Chip">
+        <label for="Chip">Chip</label><br>
+    </div>
+
+    <div class="row">
+        <br />
+        <br />
+        <br />
+        <p><a class="btn btn-default" id="submit">Submit</a></p>
+        <br />
+    </div>
+</div>
+

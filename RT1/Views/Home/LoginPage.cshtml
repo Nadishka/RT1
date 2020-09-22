@@ -1,0 +1,24 @@
+﻿@model RT1.RouteConfig
+
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<style>
+    .center {
+        text-align: center;
+        border: 3px solid red;
+    }
+</style>
+
+<div class="center">
+    <h4>Please Input Your Credentials</h4><br />
+    <input type="text" id="username" placeholder="Username" /><br /><br />
+    <input type="text" id="password" placeholder="Password" /><br /><br />
+    <a class="btn btn-default" id="login" @Html.ActionLink("Login", "Index","Home") <br />
+
+</div>
+
+
+
